@@ -19,6 +19,7 @@ def find_index_recommend(root, arr, vec):
     # Return -1 if no recommendation is found, otherwise return the index
     return -1 if index == float('inf') else index
 
+
 def find_recommend_friend(n, m, friendships):
     vec = [[] for _ in range(n + 1)]
 
