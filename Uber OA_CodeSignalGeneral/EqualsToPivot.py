@@ -1,4 +1,4 @@
-# Kaiqi's Solution
+# Kaiqi's Solution, basically the same with GPT's 
 def solution1(numbers, pivot):
     res = []
     for num in numbers:

@@ -16,7 +16,7 @@ def calculateDiff(word):
             num_of_connosants += 1
     return abs(num_of_vowels - num_of_connosants)
 
-def solution(text):
+def solution1(text):
     list_of_words = text.split(" ")
     word_to_diff = {}
     for word in list_of_words:
@@ -32,7 +32,7 @@ def solution(text):
 # 1. a neat way to calculate the absolute diff between vowels and consonants
 # 2. instead of using a dict to map word and diff, compute the diff on the fly and pass into sort function immediately
 
-def GPTsolution(text):
+def solution2(text):
     # Define vowels
     vowels = set('aeiou')
     
@@ -47,4 +47,4 @@ def GPTsolution(text):
 
 if __name__ == "__main__":
     text = "penelope lives in hawaii"
-    print(GPTsolution(text))
+    print(solution2(text))
