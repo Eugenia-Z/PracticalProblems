@@ -23,7 +23,11 @@ def superBitStrings(n, bitStrings):
                 # Join the list into a new bitstring and add it to the set
                 unique_bitstrings.add(''.join(super_bits))
     return len(unique_bitstrings)
+
 if __name__ == "__main__":
     n = 5
     bitStrings = [10, 26]
     print(superBitStrings(n, bitStrings))
+    
+# for each bitstring, there are up to 2^m super bit strings where m is the number of zeros in the bitstring, in the worst case, it can be up to 2^n
+# The overall time complexity is O(k*2^n), where k is the number of intergers in bitString.

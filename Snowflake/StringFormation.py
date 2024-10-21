@@ -24,6 +24,7 @@ class Solution:
                 target_index = ord(target_char) - ord('a')
                 dp[i+1] = (dp[i+1] + dp[i] * char_count[j][target_index]) % MOD
         return dp[l]
+    
 if __name__ == "__main__":
     words = ["valya", "lyglb", "vldoh"]
     target = "val"
