@@ -1,4 +1,4 @@
-"""GPT's solution"""
+"""GPT's solution, with 2 test cases seems to work fine"""
 def getMinCost(cost, time):
     n = len(cost)
     MOD = 10**9 + 7
@@ -22,5 +22,7 @@ def getMinCost(cost, time):
 
 if __name__ == "__main__":
     cost = [1, 1, 3, 4]
-    time = [3, 1, 2, 3]
+    time = [3, 1, 2, 3]  # output: 1
+    # cost = [1, 1, 3, 4]
+    # time = [3, 1, 2, 3]  # output: 3
     print(getMinCost(cost, time))
