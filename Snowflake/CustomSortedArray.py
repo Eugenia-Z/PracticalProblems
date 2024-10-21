@@ -8,9 +8,9 @@ def moves(arr):
     left, right = 0, len(arr)-1
     count = 0
     while left < right:
-        while left < len(arr) and isEven(left):
+        while left < len(arr) and isEven(arr[left]):
             left += 1
-        while right >= 0 and not isEven(right):
+        while right >= 0 and not isEven(arr[right]):
             right -= 1
         if left < right:
             # we found an odd number on the left and an even number on the right that need to be swapped
