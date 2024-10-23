@@ -18,7 +18,7 @@ def selectStock(saving, currentValue, futureValue):
     return curr_sum
   
   
-## GPT's DP solution:
+## GPT's DP solution - a very interesting learning point:
 def selectStock2(saving, currentValue, futureValue):
     n = len(currentValue)
     profit = [futureValue[i] - currentValue[i] for i in range (n)]
