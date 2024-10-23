@@ -16,7 +16,8 @@ def selectStock(saving, currentValue, futureValue):
             curr_sum += (-curr_delta)
             saving -= curr_value
     return curr_sum
-  
+
+# O(nlogn)
   
 ## GPT's DP solution - a very interesting learning point:
 def selectStock2(saving, currentValue, futureValue):
@@ -37,6 +38,7 @@ def selectStock2(saving, currentValue, futureValue):
             for j in range(saving, cost-1, -1):
                 dp[j] = max(dp[j], dp[j-cost] + gain)     
     return max(dp)
+# O(n * savings) when savings is small, DP gives a linear solution
 
 if __name__ == "__main__":
     saving = 250

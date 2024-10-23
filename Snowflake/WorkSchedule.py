@@ -40,6 +40,8 @@ def findSchedules(work_hours, day_hours, pattern):
     backtrack(0, remaining_hours, current_schedule)
     return sorted(schedules)
 
+# O(k * n!): k is the number of valid schedules and n is the number of question marks.
+
 if __name__ == "__main__":
     work_hours = 24
     day_hours = 4
