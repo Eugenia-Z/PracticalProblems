@@ -21,8 +21,10 @@ def getMinCost(cost, time):
     return dp[n-1] % MOD
 
 if __name__ == "__main__":
-    cost = [1, 1, 3, 4]
-    time = [3, 1, 2, 3]  # output: 1
+    # cost = [1, 1, 3, 4]
+    # time = [3, 1, 2, 3]  # output: 1
     # cost = [1, 1, 3, 4]
     # time = [3, 1, 2, 3]  # output: 3
+    cost = [4, 2, 3, 4, 2]
+    time = [4, 1, 1, 1, 1]  # output: 4
     print(getMinCost(cost, time))
