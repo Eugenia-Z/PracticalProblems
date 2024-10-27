@@ -1,4 +1,4 @@
-"""GPT's solution, with 2 test cases seems to work fine"""
+"""GPT's solution, with 3 test cases seems to work fine, but definately not the most optimal one"""
 def getMinCost(cost, time):
     n = len(cost)
     MOD = 10**9 + 7
