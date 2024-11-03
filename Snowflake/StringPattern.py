@@ -1,4 +1,9 @@
 # GPT Solution:
+# 2D list dp: dp[i][j] represents the number of valid words of length i with j consecutive words
+# When adding a consonant, it breaks any consecutive vowels, so all states of the previous length(dp[i-1][j] for all j) contribute to the new state dp[i][0], 
+# and the # of ways to add a consonant is multiplied by the # of consonants
+# when adding a vowel, it extends the chain of consecutive vowels, so dp[i][j] depends on dp[i-1][j-1] and is multiplied by the # of vowels
+
 MOD = 10**9 + 7
 def calculateWays(wordLen, maxVowels):
     # DP table: dp[i][j] means length `i` word ends with `j` consecutive vowels
