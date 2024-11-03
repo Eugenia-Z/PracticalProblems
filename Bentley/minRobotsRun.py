@@ -1,4 +1,4 @@
-def solution(plan):
+def IterativeDFSsolution(plan):
     rows, cols = len(plan), len(plan[0])
     visited = [[False for _ in range(cols)] for _ in range(rows)]
     
@@ -28,6 +28,7 @@ def solution(plan):
                 runs += 1  # Each DFS means one cleaning run
     return runs
 
+
 # Example usage
 plan = ['.*#..*', '.*#*.#', '######', '.*..#.', '...###']
-print(solution(plan))
+print(IterativeDFSsolution(plan))
