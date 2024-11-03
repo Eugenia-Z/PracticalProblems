@@ -32,11 +32,11 @@ def solution(S):
         largest_palindrome = half_palindrome_str + half_palindrome_str[::-1]
 
     # Special case:
-    if largest_palindrome == "" or largest_palindrome[0] == '0':
+    if largest_palindrome[0] == '0':
         return middle_digit if middle_digit else '0'
     return largest_palindrome
 
 # Example usage:
-# print(solution("00900"))
+# print(solution("00000"))
 # print(solution("54315"))
-print(solution("54321"))
+# print(solution("54321"))
