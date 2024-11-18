@@ -37,6 +37,7 @@ def solution(S):
     return largest_palindrome
 
 # Example usage:
+# len(S) > 0
 # print(solution("00000"))
 # print(solution("54315"))
 # print(solution("54321"))
