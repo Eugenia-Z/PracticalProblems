@@ -26,7 +26,6 @@ def get_num_of_total_reports(org_level):
     
     count = 0
     for employee_name, reports in org_level.items():
-        print(employee_name, reports)
         count += 1
         if reports:
             count += get_num_of_total_reports(reports)
