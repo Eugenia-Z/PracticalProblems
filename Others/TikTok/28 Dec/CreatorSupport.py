@@ -2,28 +2,29 @@
 # output: max # of creators can be supported while mainting a + netImpact
 
 def maximizeCreatorSupport(impactValue):
-    pos = [x for x in impactValue if x > 0]
-    neg = [x for x in impactValue if x < 0]
-    netrual = [x for x in impactValue if x == 0]
+    positive_impact = [val for val in impactValue if val > 0]
+    negative_impact = [val for val in impactValue if val < 0]
+    neutral_impact = [val for val in impactValue if val == 0]
+
+    negative_impact.sort(reverse=True) # values are all negative
     
-    curr_ppl = len(pos)
-    net_pos = sum(pos)
-    neg.sort()
-  
-    i = 0
-    if net_pos == 0: 
+    # Start processing
+    net_impact = sum(positive_impact)
+    curr_ppl = len(positive_impact)
+    
+    if curr_ppl == 0: 
         return 0
-    else:
-        curr_ppl += len(netrual)
-        
-        while net_pos > 0 and i<len(neg):
-            net_pos += neg[i]
+    curr_ppl += len(neutral_impact)
+    
+    # Attempt to add negative impacts while maintaining positive net impact
+    for impact in negative_impact:
+        if net_impact + impact > 0:
+            net_impact += impact
             curr_ppl += 1
-            
-    return curr_ppl - 1
-            
-impactValue = [2,1,1,-4]    
-print(maximizeCreatorSupport(impactValue)) 
+        else:
+            break
+    
+    return curr_ppl
         
     
     
