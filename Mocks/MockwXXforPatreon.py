@@ -64,3 +64,12 @@ print(sol(nums))
 # ans: 4
 
 # ans = 4
+
+
+"""Implement the RandomizedSet class, allowing:
+Adds an item val into the set 
+Removes an item val from the set if present
+Gets a random element from the current set of elements. Each element must have the same probability of being returned."""
+
+# input data type, scope 
+# return or not, or what (how I will handle it depends on xx)
